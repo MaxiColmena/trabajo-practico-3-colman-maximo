@@ -10,16 +10,51 @@
 <body>
     <div class="container mt-4">
         <h1 class="text-center">Dragon Ball</h1>
+
+        <!-- Grupo de búsqueda: input, buscar y reiniciar -->
         <div class="input-group mb-3">
             <input type="text" id="search" class="form-control" placeholder="Busca en el universo...">
             <button id="search-btn" class="btn btn-primary">Buscar</button>
             <button id="reset-btn" class="btn btn-secondary ms-2">Reiniciar</button>
         </div>
+
+        <!-- Contenedor donde se mostrarán las tarjetas de personajes -->
         <div id="characters-container" class="row"></div>
     </div>
+
+    <!-- Indicador de carga -->
     <div id="loading" class="text-center mt-3" style="display: none;">
         <p>Cargando más personajes...</p>
     </div>
+
+    <!-- Modal con detalles del personaje -->
+    <div class="modal fade" id="characterModal" tabindex="-1" aria-labelledby="characterModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="characterModalLabel">Detalles del personaje</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-5 text-center">
+                            <img id="modal-image" src="" alt="Imagen del personaje" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-7">
+                            <h4 id="modal-name"></h4>
+                            <p><strong>Raza:</strong> <span id="modal-race"></span></p>
+                            <p><strong>Género:</strong> <span id="modal-gender"></span></p>
+                            <p><strong>Planeta de origen:</strong> <span id="modal-planet"></span></p>
+                            <p><strong>Descripción:</strong> <span id="modal-description"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
