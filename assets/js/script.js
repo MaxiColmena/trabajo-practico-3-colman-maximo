@@ -1,4 +1,5 @@
 let currentPage = 1;
+
 const limit = 9; // Número de personajes por página
 
 document.addEventListener("DOMContentLoaded", () => {
